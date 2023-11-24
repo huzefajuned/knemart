@@ -9,6 +9,8 @@ function App() {
   return (
     <>
       <div>
+        <h2 className="bg-blue-400  text-2xl">This is changes by Huzefa</h2>
+      </div>
     </>
   );
 }
