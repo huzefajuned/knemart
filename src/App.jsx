@@ -9,14 +9,6 @@ function App() {
   return (
     <>
       <div>
-        <p>KneMArt</p>
-        <p className="bg-red-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ad
-          voluptatem commodi in eos, aspernatur voluptatum fugiat adipisci,
-          impedit est facilis non architecto quod veritatis dicta minus unde
-          officiis libero.
-        </p>
-      </div>
     </>
   );
 }
