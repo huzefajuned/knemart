@@ -8,10 +8,11 @@ function App() {
 
   return (
     <>
-    <div>
-    <h1 className='bg-red-800 text-2xl text-center p-10'>Hii This is kneMart..</h1>
-    </div>
-  
+      <div>
+        {/* <h1 className='bg-red-800 text-2xl text-center p-10'>Hii This is kneMart..</h1> */}
+        <p className='bg-yellow-500'>This is bushra jabin.</p>
+      </div>
+
     </>
   )
 }
