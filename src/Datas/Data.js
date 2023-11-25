@@ -135,7 +135,7 @@ export const DummyData = [
   },
   {
     id: 8,
-    title: "Microsoft Surface Laptop 4",
+    title: "Microsoft Surface",
     description:
       "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
     price: 1499,
@@ -177,7 +177,7 @@ export const DummyData = [
   },
   {
     id: 10,
-    title: "HP Pavilion 15-DK1056WM",
+    title: "HP Pavilion ",
     description:
       "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
     price: 1099,
@@ -204,7 +204,7 @@ export const DummyData = [
     discountPercentage: 8.4,
     rating: 4.26,
     stock: 65,
-    brand: "Impression of Acqua Di Gio",
+    brand: "Impression of ",
     category: "fragrances",
     thumbnail: "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
     images: [
@@ -237,7 +237,7 @@ export const DummyData = [
   },
   {
     id: 13,
-    title: "Fog Scent Xpressio Perfume",
+    title: "Fog Scent Perfume",
     description:
       "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
     price: 13,
@@ -258,7 +258,7 @@ export const DummyData = [
   },
   {
     id: 14,
-    title: "Non-Alcoholic Concentrated Perfume Oil",
+    title: "Non-Alcoholic Perfume",
     description:
       "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
     price: 120,
@@ -340,7 +340,7 @@ export const DummyData = [
   },
   {
     id: 18,
-    title: "Oil Free Moisturizer 100ml",
+    title: "Oil Free Moisturizer",
     description:
       "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
     price: 40,
@@ -381,7 +381,7 @@ export const DummyData = [
   },
   {
     id: 20,
-    title: "Freckle Treatment Cream- 15gm",
+    title: "Freckle Cream",
     description:
       "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
     price: 70,
@@ -543,7 +543,7 @@ export const DummyData = [
   },
   {
     id: 28,
-    title: "3D Embellishment Art Lamp",
+    title: "3D Embellishment Lamp",
     description:
       "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
     price: 20,
