@@ -3,8 +3,11 @@ import { BsHandbagFill } from "react-icons/bs";
 
 const AddCart = () => {
   return (
-    <div className=" cursor-pointer pr-10">
+    <div className=" cursor-pointer pr-10 flex flex-row justify-end">
       <BsHandbagFill size={40} />
+      <h2 className="absolute bg-red-600 top-4 right-10 rounded-full text-white w-6 h-6 text-center">
+        0
+      </h2>
     </div>
   );
 };
