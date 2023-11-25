@@ -4,7 +4,7 @@ import React from "react"
 import { DummyData } from "../Datas/Data";
 const Products = () => {
     return (
-        <div className=" bg-white flex flex-row flex-wrap  ">
+        <div className=" bg-white flex flex-row flex-wrap cursor-pointer  ">
             {
                 DummyData.map((data, index, arr) => {
                     const { title, price, images, brand, button } = data;
