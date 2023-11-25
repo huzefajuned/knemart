@@ -1,7 +1,12 @@
 import React from "react";
+import { BsHandbagFill } from "react-icons/bs";
 
 const AddCart = () => {
-  return <div>I am cart</div>;
+  return (
+    <div className="">
+      <BsHandbagFill size={40} />
+    </div>
+  );
 };
 
 export default AddCart;
