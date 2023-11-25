@@ -1,3 +1,5 @@
+import { CiShoppingCart } from "react-icons/ci";
+
 import React from "react"
 import { DummyData } from "../Datas/Data";
 const Products = () => {
@@ -13,8 +15,7 @@ const Products = () => {
                             <h2 className="text-xl pt-5 text-black font-bold tracking-widest">{title}</h2>
                             <h3 className="text-xl">{price}</h3>
                             <h3 className="text-xl tracking-wide">{brand}</h3>
-                            <button className="bg-red-800 w-40 p-2 mt-2 text-xl mb-3 rounded-sm text-center">{button}</button>
-
+                            <button className="bg-red-600 w-44 relative ml-14 text-xl mb-3 mt-4 pt-2 rounded-sm text-center flex flex-row  "> <CiShoppingCart className=" text-3xl mt-0 m-2" /> {button} </button>
                         </div>
                     )
                 })
