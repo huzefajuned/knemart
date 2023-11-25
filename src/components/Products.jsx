@@ -1,8 +1,9 @@
 
-import React from "react"
+import React from "react";
 import { DummyData } from "../Datas/Data";
 import CustomButton from "./CustomButton";
 const Products = () => {
+
     return (
         <div className=" bg-white flex flex-row flex-wrap cursor-pointer  ">
             {
@@ -25,3 +26,4 @@ const Products = () => {
 }
 
 export default Products;
+

@@ -1,12 +1,12 @@
 import React from "react";
 import Products from "../components/Products";
-import Navbar from "../components/NavbarComponent/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 const Home = () => {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-2">
       <Navbar />
       <Products />
-    </React.Fragment>
+    </div>
   );
 };
 
