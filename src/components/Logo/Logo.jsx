@@ -1,9 +1,9 @@
 import React from "react";
-import LogoImg from "/src/Images/logoTransparent.png";
+import LogoImg from "/src/Images/Logo.png";
 
 const Logo = () => {
   return (
-    <div className=" flex w-96 h-full pl-3">
+    <div className=" flex w-80 h-full pl-10">
       <div className="flex justify-center align-middle w-70">
         <img
           src={LogoImg}
