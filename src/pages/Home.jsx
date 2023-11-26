@@ -5,7 +5,7 @@ import Products from "../components/Products/Products";
 const Home = () => {
   return (
     <div className="flex flex-col gap-2">
-      <Navbar />
+      {/* <Navbar /> */}
       <Carousal />
       <Products />
     </div>

@@ -27,14 +27,14 @@ const Products = () => {
 
   return (
     <>
-      <div className=" bg-white flex flex-row flex-wrap cursor-pointer">
+      <div className=" bg-white flex flex-row flex-wrap cursor-pointer justify-center">
         {products.map((product, index, arr) => {
           // key descr.... of  a single  product object----
           const { id, category, description, image, price, title, rating } =
             product;
           return (
-            <div id={id} className="  m-10 w-72  text-center shadow-lg">
-              <img src={image} alt="" className=" h-72" />
+            <div id={id} className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center">
+              <img src={image} alt="" className=" h-72 p-2" />
               <h2 className="text-xl text-black font-bold tracking-widest p-2">
                 {title}
               </h2>
