@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { DummyData } from "../../Datas/Data";
 import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
@@ -33,7 +32,10 @@ const Products = () => {
           const { id, category, description, image, price, title, rating } =
             product;
           return (
-            <div id={id} className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center">
+            <div
+              id={id}
+              className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center"
+            >
               <img src={image} alt="" className=" h-72 p-2" />
               <h2 className="text-xl text-black font-bold tracking-widest p-2">
                 {title}

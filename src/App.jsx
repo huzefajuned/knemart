@@ -12,15 +12,18 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path="*" element={<Errorpage/>} />
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
+          <Route path="*" element={<Errorpage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
-      {/* <Home /> */}
-      {/* <ToastContainer
+
+      {/* Toast Container--
+       * dont commene or remove this
+       */}
+      <ToastContainer
         position="top-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -31,9 +34,7 @@ function App() {
         draggable
         pauseOnHover
         theme="colored"
-      />{" "} */}
-
-
+      />
     </>
   );
 }
