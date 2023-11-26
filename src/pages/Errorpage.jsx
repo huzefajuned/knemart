@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouteError } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-const errorImage = "./src/assets/errorImage.png"
+import errorImage from "../assets/errorImage.png"
 export const Errorpage = () => {
     const navigate = useNavigate();
     const backHomePage = () => {
