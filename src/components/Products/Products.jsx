@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
+import { toast } from "react-toastify";
 
-const Products = () => {
+const Products = ({ cartItems, setCartItems }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   //  API baseURL
@@ -14,8 +15,14 @@ const Products = () => {
       try {
         const data = await axios.get(`${apiBaseURL}/products`);
         setProducts(data.data);
+        if (data) {
+          toast.success("products loaded");
+        }
       } catch (error) {
         console.log("error", error);
+        if (error) {
+          toast.error("products error to load");
+        }
       } finally {
         setLoading(false);
       }
@@ -33,7 +40,7 @@ const Products = () => {
             product;
           return (
             <div
-              id={id}
+              key={id}
               className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center"
             >
               <img src={image} alt="" className=" h-72 p-2" />
@@ -42,7 +49,12 @@ const Products = () => {
               </h2>
               <h3 className="text-xl">Price:{price}</h3>
               <h3 className="text-xl tracking-wide"> Category:{category}</h3>
-              <CustomButton button={"Add To cart"} />
+              <CustomButton
+                button={"Add To cart"}
+                product={product}
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+              />
             </div>
           );
         })}

@@ -12,7 +12,6 @@ const SearchBar = () => {
     }
   };
 
-  console.log("queryy", query);
   return (
     <div className="border-[1px] w-full md:w-auto py-2 rounded-md shadow-sm cursor-pointer hover:shadow-md">
       <div className="flex flex-row items-center justify-between">

@@ -8,14 +8,20 @@ import Errorpage from "./pages/Errorpage";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./components/About/About";
+import { useState } from "react";
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Navbar cartItems={cartItems} />
         <Routes>
           <Route path="*" element={<Errorpage />} />
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home cartItems={cartItems} setCartItems={setCartItems} />}
+          />
           <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
@@ -24,16 +30,13 @@ function App() {
        * dont commene or remove this
        */}
       <ToastContainer
-        position="top-center"
+        position="top-left"
         autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
         closeOnClick
-        rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="colored"
+        theme="light"
       />
     </>
   );
