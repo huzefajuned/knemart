@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Errorpage from "./pages/Errorpage";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
+import About from "./components/About/About";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Errorpage/>} />
           <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
         </Routes>
       </BrowserRouter>
       {/* <Home /> */}
