@@ -8,9 +8,9 @@ export const Errorpage = () => {
         navigate('/')
     }
     return (
-        <div className='bg-red-700 flex flex-col justify-center '>
-            <img src={errorImage} alt="" className='bg-yellow-600 w-96  fle flex-row justify-center' />
-            <button className='bg-white w-96 p-4 text-2xl m-4 rounded-md' onClick={backHomePage}>Back</button>
+        <div className='bg-red-800 flex flex-col  justify-center items-center p-36 '>
+            <img src={errorImage} alt="" className=' w-96 fle flex-row justify-center' />
+            <button className=' w-96 p-4 text-4xl m-4 rounded-md hover:shadow-md	' onClick={backHomePage}>Back</button>
         </div>
     )
 }
