@@ -1,16 +1,16 @@
 import React from 'react'
 import { useRouteError } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import errorImage from "../assets/errorImage.png"
+import errorImage from "../assets/error.png"
 export const Errorpage = () => {
     const navigate = useNavigate();
     const backHomePage = () => {
         navigate('/')
     }
     return (
-        <div className='bg-red-700 flex flex-col justify-center '>
-            <img src={errorImage} alt="" className='bg-yellow-600 w-96  fle flex-row justify-center' />
-            <button className='bg-white w-96 p-4 text-2xl m-4 rounded-md' onClick={backHomePage}>Back</button>
+        <div className=' bg-red-600  flex flex-col  justify-center items-center p-36 '>
+            <img src={errorImage} alt="" className=' w-1/2 fle flex-row justify-center' />
+            <button className=' w-96 p-10 text-4xl m-4 rounded-md hover:shadow-md	' onClick={backHomePage}>Back</button>
         </div>
     )
 }

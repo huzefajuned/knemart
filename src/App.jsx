@@ -8,6 +8,7 @@ import Errorpage from "./pages/Errorpage";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./components/About/About";
+import ProductView from "./pages/ProductView";
 import { useState } from "react";
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -23,6 +24,7 @@ function App() {
             element={<Home cartItems={cartItems} setCartItems={setCartItems} />}
           />
           <Route path="/about" element={<About />} />
+          <Route path="/ProductView/:id" element={<ProductView />} />
         </Routes>
       </BrowserRouter>
 
