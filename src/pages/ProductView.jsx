@@ -9,11 +9,11 @@ const ProductView = () => {
   // console.log(id)
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState([]);
-  console.log(product);
   useEffect(() => {
     async function getProducts() {
       try {
         const data = await axios.get(`${apiBaseURL}/products/${id}`);
+        console.log('dataa', data)
         setProduct(data.data);
         // console.log(product)
       } catch (error) {
@@ -32,7 +32,7 @@ const ProductView = () => {
     <>
       <div>
         <div>
-          <img src={images[0]} alt="images" />
+          <img src={images?.[0]} alt="images" />
           <h2>{brand}</h2>
           <h3>{category}</h3>
         </div>

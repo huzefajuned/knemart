@@ -4,11 +4,11 @@ import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
-<<<<<<< HEAD
+
 import SearchBar from "../SearchBar/SearchBar";
 export const apiBaseURL = "https://dummyjson.com";
-=======
->>>>>>> 97ec2c8c1eb4b2d90cc40023a9921630107616b8
+
+
 
 const Products = ({ cartItems, setCartItems }) => {
   const navigate = useNavigate();
@@ -16,15 +16,7 @@ const Products = ({ cartItems, setCartItems }) => {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  //  API baseURL
-<<<<<<< HEAD
 
-  // console.log("products", products);
-=======
-  const apiBaseURL = "https://dummyjson.com";
-  // console.log(products);
-
->>>>>>> 97ec2c8c1eb4b2d90cc40023a9921630107616b8
   useEffect(() => {
     async function getProducts() {
       try {
