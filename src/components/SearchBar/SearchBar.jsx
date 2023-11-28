@@ -5,6 +5,7 @@ import Dropdown from "../Dropdown/Dropdown";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
+
   const notify = () => {
     if (query === "") {
       toast.error("search bar is empty...!!");
