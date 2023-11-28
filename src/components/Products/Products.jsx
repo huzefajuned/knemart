@@ -5,16 +5,17 @@ import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
 import SearchBar from "../SearchBar/SearchBar";
-
+export const apiBaseURL = "https://dummyjson.com";
 
 const Products = ({ cartItems, setCartItems }) => {
   const navigate = useNavigate();
+
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   //  API baseURL
-  const apiBaseURL = "https://dummyjson.com";
 
-  console.log("products", products);
+  // console.log("products", products);
   useEffect(() => {
     async function getProducts() {
       try {
@@ -37,9 +38,10 @@ const Products = ({ cartItems, setCartItems }) => {
   }, []);
 
 
-  const productView = (id)=> {
-   alert(`You clickd ${id}`)
-   navigate('/ProductView')
+  const productView = (id) => {
+    //  alert(`You clickd ${id}`)
+    navigate(`/ProductView/${id}`)
+
   }
   return (
     <>
@@ -51,11 +53,11 @@ const Products = ({ cartItems, setCartItems }) => {
             product;
           return (
             <div
-            onClick={()=>productView(product.id)}
+              onClick={() => productView(product.id)}
               key={product.id}
               className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center"
             >
-              <img src={images[0]} alt="" className=" h-72 p-2"  />
+              <img src={images[0]} alt="" className=" h-72 p-2" />
               <h2 className="text-xl text-black font-bold tracking-widest p-2">
                 {title}
               </h2>
