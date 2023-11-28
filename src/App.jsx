@@ -9,6 +9,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./components/About/About";
 import { useState } from "react";
+import Pagination from "./components/Pagination/Pagination";
+
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -24,6 +26,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Pagination />
       </BrowserRouter>
 
       {/* Toast Container--
