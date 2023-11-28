@@ -3,15 +3,14 @@ import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
-import SearchBar from "../SearchBar/SearchBar";
 
 const Products = ({ cartItems, setCartItems }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   //  API baseURL
   const apiBaseURL = "https://dummyjson.com";
+  // console.log(products);
 
-  console.log("products", products);
   useEffect(() => {
     async function getProducts() {
       try {
@@ -62,7 +61,6 @@ const Products = ({ cartItems, setCartItems }) => {
         })}
       </div>
       {loading && <Loader />}
-      <SearchBar products={products} setProducts={setProducts} />
     </>
   );
 };
