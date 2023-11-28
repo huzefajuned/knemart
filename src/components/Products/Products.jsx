@@ -3,18 +3,20 @@ import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Products = ({ cartItems, setCartItems }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   //  API baseURL
-  const apiBaseURL = "https://fakestoreapi.com";
+  const apiBaseURL = "https://dummyjson.com";
 
+  console.log("products", products);
   useEffect(() => {
     async function getProducts() {
       try {
         const data = await axios.get(`${apiBaseURL}/products`);
-        setProducts(data.data);
+        setProducts(data.data.products);
         if (data) {
           toast.success("products loaded");
         }
@@ -36,14 +38,14 @@ const Products = ({ cartItems, setCartItems }) => {
       <div className=" bg-white flex flex-row flex-wrap cursor-pointer justify-center">
         {products.map((product, index, arr) => {
           // key descr.... of  a single  product object----
-          const { id, category, description, image, price, title, rating } =
+          const { id, category, description, images, price, title, rating } =
             product;
           return (
             <div
               key={id}
               className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center"
             >
-              <img src={image} alt="" className=" h-72 p-2" />
+              <img src={images[0]} alt="" className=" h-72 p-2" />
               <h2 className="text-xl text-black font-bold tracking-widest p-2">
                 {title}
               </h2>
@@ -60,6 +62,7 @@ const Products = ({ cartItems, setCartItems }) => {
         })}
       </div>
       {loading && <Loader />}
+      <SearchBar products={products} setProducts={setProducts} />
     </>
   );
 };
