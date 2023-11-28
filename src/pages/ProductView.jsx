@@ -44,7 +44,7 @@ const ProductView = () => {
           <h2 className="text-2xl pb-3">Rating:{rating}</h2>
           {/* <h3>{category}</h3> */}
           <p className="text-xl">{description}</p>
-          <button className="text-2xl pt-6" onClick={backToProduts}>Back to products ←</button>
+          <button className="text-2xl pt-6 shadow-sm p-5" onClick={backToProduts}>Back to products ←</button>
           </div>
          
         </div>
