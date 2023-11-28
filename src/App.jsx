@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./components/About/About";
 import ProductView from "./pages/ProductView";
 import { useState } from "react";
+import Products from "./components/Products/Products";
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -25,6 +26,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/ProductView/:id" element={<ProductView />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
 
