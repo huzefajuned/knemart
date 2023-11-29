@@ -10,7 +10,7 @@ const Dropdown = () => {
 
   return (
     <select
-      className=" outline-none w-full h-full p-3 cursor-pointer"
+      className=" outline-none w-full h-full p-3 cursor-pointer text-gray-500"
       onChange={getSelectedOption}
     >
       <option disabled selected>

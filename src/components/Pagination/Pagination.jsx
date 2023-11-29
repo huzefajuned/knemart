@@ -13,12 +13,12 @@ const Pagination = () => {
   };
 
   return (
-    <div className=" bg-zinc-100 w-full h-20 sticky bottom-0">
-      <div className="flex flex-wra w-11/12 h-full m-auto gap-9 overflow-hidden overflow-x-scroll">
+    <div className=" bg-white w-full h-20 fixed bottom-0 scrollbar-hide">
+      <div className="flex flex-wra w-11/12 h-full m-auto gap-9 overflow-hidden overflow-x-scroll scrollbar-hide ">
         {pages.map((page) => (
           <button
             key={page}
-            className="bg-red-300 flex items-center justify-center  p-6 w-10 h-10 m-auto rounded-full"
+            className="flex items-center justify-center  p-6 w-10 h-10 m-auto rounded-full text-gray-600 shadow-md hover:shadow-lg  hover:text-black"
             onClick={pageClicked}
             value={page}
           >
