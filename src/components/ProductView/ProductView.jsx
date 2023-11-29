@@ -58,7 +58,7 @@ const ProductView = () => {
                 <img
                   src={selectedImg || images?.[0]}
                   alt="images"
-                  className="object-contain h-96"
+                  className=" h-96  border-solid border-2 border-neutral-950 p-1 object-cover w-96 shadow-md "
                 />
               </div>
               <div>
