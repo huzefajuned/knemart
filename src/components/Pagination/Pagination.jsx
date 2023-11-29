@@ -13,8 +13,8 @@ const Pagination = () => {
   };
 
   return (
-    <div className=" bg-white w-full h-20 fixed bottom-0 scrollbar-hide">
-      <div className="flex flex-wra w-11/12 h-full m-auto gap-9 overflow-hidden overflow-x-scroll scrollbar-hide ">
+    <div className=" bg-white w-full h-20 fixed bottom-0 overflow-scroll no-scrollbar">
+      <div className="flex flex-wra w-11/12 h-full m-auto gap-9  overflow-scroll no-scrollbar  ">
         {pages.map((page) => (
           <button
             key={page}
