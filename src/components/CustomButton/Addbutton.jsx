@@ -1,5 +1,7 @@
 import React from 'react'
 import { CiShoppingCart } from "react-icons/ci";
+import { BsFillLightningChargeFill } from "react-icons/bs";
+
 
 const Addbutton = () => {
     return (
@@ -7,7 +9,9 @@ const Addbutton = () => {
             <button className='bg-yellow-500 P-4 rounded-sm flex flex-col'>
                 <CiShoppingCart className=" text-1xl mt-0 m-2" />ADD TO CART
             </button>
-            <button className='bg-orange-700 p-4 w-44 text-xl rounded-sm'>BUY NOW</button>
+            <button className=' bg-orange-700 p-4 w-44 text-xl rounded-sm'>BUY NOW
+            <BsFillLightningChargeFill/>
+            </button>
         </div>
     )
 }
