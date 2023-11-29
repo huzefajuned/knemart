@@ -53,11 +53,10 @@ const Products = ({ cartItems, setCartItems }) => {
             product;
           return (
             <div
-              onClick={() => productView(product.id)}
               key={product.id}
               className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center "
             >
-              <img src={images[0]} alt="" className=" h-72 p-2 object-contain" />
+              <img src={images[0]} alt="" className=" h-72 p-2 object-contain"   onClick={() => productView(product.id)} />
               <h2 className="text-xl text-black font-bold tracking-widest p-2">
                 {title}
               </h2>
