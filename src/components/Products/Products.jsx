@@ -4,7 +4,6 @@ import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
-
 import SearchBar from "../SearchBar/SearchBar";
 export const apiBaseURL = "https://dummyjson.com";
 
