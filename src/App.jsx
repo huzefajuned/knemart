@@ -11,6 +11,7 @@ import About from "./components/About/About";
 import ProductView from "./pages/ProductView";
 import { useState } from "react";
 import Products from "./components/Products/Products";
+import Pagination from "./components/Pagination/Pagination";
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ProductView/:id" element={<ProductView />} />
           <Route path="/products" element={<Products />} />
         </Routes>
+        <Pagination />
       </BrowserRouter>
 
       {/* Toast Container--

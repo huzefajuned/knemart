@@ -13,6 +13,9 @@ const Dropdown = () => {
       className=" outline-none w-full h-full p-3 cursor-pointer"
       onChange={getSelectedOption}
     >
+      <option disabled selected>
+        --select something--
+      </option>
       {options.map((data) => (
         <option key={data.id} value={data.category}>
           {data.category}
