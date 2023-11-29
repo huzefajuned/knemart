@@ -8,7 +8,7 @@ import Errorpage from "./pages/Errorpage";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./components/About/About";
-import ProductView from "./pages/ProductView";
+import ProductView from "./components/ProductView/ProductView";
 import { useState } from "react";
 import Products from "./components/Products/Products";
 import Pagination from "./components/Pagination/Pagination";
