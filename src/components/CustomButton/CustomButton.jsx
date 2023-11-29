@@ -5,8 +5,8 @@ const CustomButton = ({ button, product, cartItems, setCartItems }) => {
   // adding product in cart---
 
   const onAddToCart = () => {
-    toast.success("Item added successfully...");
-    setCartItems([...cartItems, product]);
+    // toast.success("Item added successfully...");
+    // setCartItems([...cartItems, product]);
   };
 
   // console.log("catouetm, ", cartItems);
