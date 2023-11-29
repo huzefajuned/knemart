@@ -4,19 +4,17 @@ import LogoImg from "/src/Images/Logo.png";
 
 const Logo = () => {
   const navigate = useNavigate();
-  const  backToHomePage=()=>{
-    navigate('/')
-  }
+  const backToHomePage = () => {
+    navigate("/");
+  };
   return (
-    <div className=" flex w-80 h-full pl-10">
-      <div className="flex justify-center align-middle w-60">
-        <img
-          src={LogoImg}
-          alt="logo"
-          className="w-full bg-contain cursor-pointer"
-          onClick={backToHomePage}
-        />
-      </div>
+    <div className="w-full flex justify-center align-middle h-full md:justify-start md:pl-6">
+      <img
+        src={LogoImg}
+        alt="logo"
+        className=" w-min md:w-6/12 p-1 bg-contain cursor-pointer"
+        onClick={backToHomePage}
+      />
     </div>
   );
 };
