@@ -8,5 +8,4 @@ const Hamburger = () => {
     </div>
   );
 };
-
 export default Hamburger;

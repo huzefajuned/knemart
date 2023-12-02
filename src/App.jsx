@@ -12,6 +12,7 @@ import ProductView from "./components/ProductView/ProductView";
 import { useState } from "react";
 import Products from "./components/Products/Products";
 import Pagination from "./components/Pagination/Pagination";
+import AddCart from "./components/Cart/AddCart";
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/ProductView/:id" element={<ProductView />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/addCart" element={<AddCart />} />
         </Routes>
         <Pagination />
       </BrowserRouter>
