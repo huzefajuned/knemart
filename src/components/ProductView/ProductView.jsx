@@ -37,8 +37,9 @@ const ProductView = () => {
   };
 
 
-  const selectimage = (index) => {
-    setSelectedImg(index)
+  const selectimage = (imageUrl,index) => {
+    setSelectedImg(imageUrl)
+    setCurrentImage(index)
   }
   const { category, brand, description, price, rating, images } = product;
 
@@ -53,7 +54,9 @@ const ProductView = () => {
                 <img
                   src={imageUrl}
                   onClick={() => selectimage(imageUrl, index)}
-                  className="border-2  m-1 h-96 mt-0 object-contain hover:border-blue-400"
+                  className={` h-96 m-2 cursor-pointer ${CurrentImage === index ? 'border-2 border-blue-500' : 'border-2 border-gray-300'}`}
+
+                  // className="border-2  m-1 h-96 mt-0 object-contain ${CurrentImage === index ? 'border-2 border-green-500' : 'border-2 border-gray-300'}`"
                 />
               ))}
             </div>
