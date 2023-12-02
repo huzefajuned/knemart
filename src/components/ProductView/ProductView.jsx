@@ -13,7 +13,7 @@ const ProductView = () => {
   const [product, setProduct] = useState([]);
 
   const [selectedImg, setSelectedImg] = useState("");
-  const[CurrentImage,setCurrentImage]=useState("")
+  const [CurrentImage, setCurrentImage] = useState("")
 
   useEffect(() => {
     async function getProducts() {
@@ -37,8 +37,8 @@ const ProductView = () => {
   };
 
 
-  const selectimage=(index)=>{
-setSelectedImg(index)
+  const selectimage = (index) => {
+    setSelectedImg(index)
   }
   const { category, brand, description, price, rating, images } = product;
 
@@ -52,7 +52,7 @@ setSelectedImg(index)
               {images?.map((imageUrl, index) => (
                 <img
                   src={imageUrl}
-                  onClick={()=>selectimage(imageUrl,index)}
+                  onClick={() => selectimage(imageUrl, index)}
                   className="border-2  m-1 h-96 mt-0 object-contain hover:border-blue-400"
                 />
               ))}
