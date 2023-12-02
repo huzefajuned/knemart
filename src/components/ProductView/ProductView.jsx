@@ -6,7 +6,7 @@ import Loader from "../Loader/Loader";
 import { useNavigate } from "react-router-dom";
 import Addbutton from "../CustomButton/Addbutton";
 import { BsArrowReturnLeft } from "react-icons/bs";
-const ProductView = () => {
+const ProductView = ({ cartItems, setCartItems }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const ProductView = () => {
     async function getProducts() {
       try {
         const data = await axios.get(`${apiBaseURL}/products/${id}`);
-        console.log("dataa", data);
+        // console.log("dataa", data);
         setProduct(data.data);
         // console.log(product)
       } catch (error) {
@@ -37,7 +37,7 @@ const ProductView = () => {
   };
 
 
-  const selectimage = (imageUrl,index) => {
+  const selectimage = (imageUrl, index) => {
     setSelectedImg(imageUrl)
     setCurrentImage(index)
   }
@@ -54,10 +54,7 @@ const ProductView = () => {
                 <img
                   src={imageUrl}
                   onClick={() => selectimage(imageUrl, index)}
-                  className={` h-96 m-2 cursor-pointer ${CurrentImage === index ? 'border-2 border-blue-500' : 'border-2 border-gray-300'}`}
-
-                  // className="border-2  m-1 h-96 mt-0 object-contain ${CurrentImage === index ? 'border-2 border-green-500' : 'border-2 border-gray-300'}`"
-                />
+                  className={` h-96 object-contain m-2 cursor-pointer ${CurrentImage === index ? 'border-2 border-blue-500' : 'border-2 border-gray-300'}`} />
               ))}
             </div>
             <div>
@@ -69,7 +66,12 @@ const ProductView = () => {
                 />
               </div>
               <div>
-                <Addbutton />
+                <Addbutton
+                  // button={"ADD TO CART"}
+                  product={product}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems} />
+
               </div>
             </div>
           </div>

@@ -13,6 +13,7 @@ import { useState } from "react";
 import Products from "./components/Products/Products";
 import Pagination from "./components/Pagination/Pagination";
 import AddCart from "./components/Cart/AddCart";
+import ShowCart from "./components/Cart/ShowCart";
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -27,9 +28,9 @@ function App() {
             element={<Home cartItems={cartItems} setCartItems={setCartItems} />}
           />
           <Route path="/about" element={<About />} />
-          <Route path="/ProductView/:id" element={<ProductView />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/addCart" element={<AddCart />} />
+          <Route path="/ProductView/:id" element={<ProductView cartItems={cartItems} setCartItems={setCartItems} />} />
+          <Route path="/products" element={<Products cartItems={cartItems} setCartItems={setCartItems} />} />
+          <Route path="/showcart" element={<ShowCart/>} />
         </Routes>
         <Pagination />
       </BrowserRouter>
