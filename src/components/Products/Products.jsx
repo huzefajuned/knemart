@@ -45,7 +45,7 @@ const Products = ({ cartItems, setCartItems }) => {
   }
   return (
     <>
-      <div className=" bg-white flex flex-row flex-wrap cursor-pointer justify-center ">
+      <div className=" bg-white flex flex-row flex-wrap cursor-pointer justify-center mb-10  ">
 
         {products.map((product, index, arr) => {
           // key descr.... of  a single  product object----

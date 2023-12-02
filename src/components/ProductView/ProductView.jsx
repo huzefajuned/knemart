@@ -53,7 +53,7 @@ setSelectedImg(index)
                 <img
                   src={imageUrl}
                   onClick={()=>selectimage(imageUrl,index)}
-                  className="border-2 border-blue-400 m-1 h-96 mt-0 object-contain"
+                  className="border-2  m-1 h-96 mt-0 object-contain hover:border-blue-400"
                 />
               ))}
             </div>
