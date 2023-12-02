@@ -13,6 +13,7 @@ const ProductView = () => {
   const [product, setProduct] = useState([]);
 
   const [selectedImg, setSelectedImg] = useState("");
+  const[CurrentImage,setCurrentImage]=useState("")
 
   useEffect(() => {
     async function getProducts() {
@@ -35,20 +36,24 @@ const ProductView = () => {
     navigate("/products");
   };
 
+
+  const selectimage=(index)=>{
+setSelectedImg(index)
+  }
   const { category, brand, description, price, rating, images } = product;
 
   return (
     <>
       <div>
-        <div className=" flex flex-row  p-10  cursor-pointer pb-44  h-screen ">
+        <div className=" flex flex-row  p-10  cursor-pointer h-screen  ">
           <div className=" flex flex-row ">
             <div className="flex flex-col w-28 object-contain p-1 m-4 h-96  overflow-scroll no-scrollbar">
               {/* Map all iamges....from the images array. */}
               {images?.map((imageUrl, index) => (
                 <img
                   src={imageUrl}
-                  className="object-contain  h-96 "
-                  onClick={() => setSelectedImg(imageUrl)}
+                  onClick={()=>selectimage(imageUrl,index)}
+                  className="border-2 border-blue-400 m-1 h-96 mt-0 object-contain"
                 />
               ))}
             </div>

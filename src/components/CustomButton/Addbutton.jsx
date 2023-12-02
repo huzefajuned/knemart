@@ -1,15 +1,10 @@
 import React from 'react'
 import { CiShoppingCart } from "react-icons/ci";
 import { BsFillLightningChargeFill } from "react-icons/bs";
-import { func } from 'prop-types';
-
-
 
 const Addbutton = () => {
-
-
-    return (
-        <div className=' flex flex-row p-6 justify-around'>
+ return (
+        <div className=' flex flex-row p-2   mt-6 justify-between mr-6'>
             <button className='bg-yellow-500 P-4 w-44 text-xl rounded-sm flex flex-row justify-center items-center shadow-md'
              >
                 <CiShoppingCart className="" />
