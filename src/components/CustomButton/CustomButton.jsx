@@ -3,8 +3,8 @@ import { CiShoppingCart } from "react-icons/ci";
 import { toast } from "react-toastify";
 const CustomButton = ({ product, setCartItems, button, cartItems }) => {
   const onAddToCart = () => {
-    // toast.success("Item added successfully...");
-    // setCartItems([...cartItems, product]);
+    toast.success("Item added successfully...");
+    setCartItems([...cartItems, product]);
  };
 
   //

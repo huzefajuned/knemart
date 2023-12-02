@@ -9,11 +9,11 @@ import { BsArrowReturnLeft } from "react-icons/bs";
 const ProductView = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  // console.log(id)
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState([]);
-  // const [viewImage, setViewimage] = useState(0)
+
   const [selectedImg, setSelectedImg] = useState("");
+  const [CurrentImage, setCurrentImage] = useState("")
 
   useEffect(() => {
     async function getProducts() {
@@ -36,20 +36,27 @@ const ProductView = () => {
     navigate("/products");
   };
 
+
+  const selectimage = (imageUrl,index) => {
+    setSelectedImg(imageUrl)
+    setCurrentImage(index)
+  }
   const { category, brand, description, price, rating, images } = product;
 
   return (
     <>
       <div>
-        <div className=" flex flex-row  p-10  cursor-pointer pt-36 pb-44  h-screen ">
+        <div className=" flex flex-row  p-10  cursor-pointer h-screen  ">
           <div className=" flex flex-row ">
-            <div className="flex flex-col w-28 object-contain p-1 m-4 h-96">
+            <div className="flex flex-col w-28 object-contain p-1 m-4 h-96  overflow-scroll no-scrollbar">
               {/* Map all iamges....from the images array. */}
               {images?.map((imageUrl, index) => (
                 <img
                   src={imageUrl}
-                  className="h-96 object-cover"
-                  onClick={() => setSelectedImg(imageUrl)}
+                  onClick={() => selectimage(imageUrl, index)}
+                  className={` h-96 m-2 cursor-pointer ${CurrentImage === index ? 'border-2 border-blue-500' : 'border-2 border-gray-300'}`}
+
+                  // className="border-2  m-1 h-96 mt-0 object-contain ${CurrentImage === index ? 'border-2 border-green-500' : 'border-2 border-gray-300'}`"
                 />
               ))}
             </div>
