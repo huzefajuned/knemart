@@ -15,13 +15,13 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex bg-white border-[1px] md:w-auto w-[97%] md:py-2 py-1.5 rounded-md shadow-sm cursor-pointer  absolute top-24 left-3 hover:shadow-md md:static md:flex ">
-      <div className="flex flex-row  w-full items-center justify-between">
-        <div className="text-md flex w-6/12 flex-row text-gray-700 px-6 border-r-[1px] ">
+    <div className="flex border-[1px] md:w-[55%] w-[97%] md:py-2 py-1.5 rounded-md shadow-sm cursor-pointer  absolute top-24 left-3 hover:shadow-md md:static md:flex ">
+      <div className="flex flex-row w-[100%] h-full items-center justify-center">
+        <div className=" text-md w-auto flex flex-row text-gray-700 border-r-[1px]">
           <Dropdown />
         </div>
-        <div className="text-sm pl-10 w-6/12  text-gray-700 flex flex-row items-center justify-between gap-3">
-          <div className="w-full">
+        <div className="text-sm w-[100%] h-full text-gray-700 flex flex-row items-center justify-center gap-3 pr-1">
+          <div className="w-full  text-lg pl-6 py-2">
             <input
               id="searchItem"
               type="text"
@@ -32,8 +32,8 @@ const SearchBar = () => {
               }}
             />
           </div>
-          <div className=" p-2 rounded-full text-black hover:bg-red-400 hover:text-white">
-            <IoMdSearch size={18} onClick={notify} />
+          <div className=" flex flex-row justify-center items-center bg-gray-400 p-2 rounded-full text-black hover:bg-red-400 hover:text-white">
+            <IoMdSearch size={30} onClick={notify} />
           </div>
         </div>
       </div>

@@ -9,21 +9,20 @@ const Dropdown = () => {
   };
 
   return (
-    <select
-      className=" outline-none w-full h-full p-3 cursor-pointer text-gray-500"
-      onChange={getSelectedOption}
-    >
-      <option disabled selected>
-        --select something--
-      </option>
-      {options.map((data) => (
-        <option key={data.id} value={data.category}>
-          {data.category}
-        </option>
-      ))}
-    </select>
+    <div className="w-auto">
+      <select
+        className="outline-none w-auto cursor-pointer text-gray-500 p-3"
+        onChange={getSelectedOption}
+      >
+        <option selected="selected">All</option>
+        {options.map((data) => (
+          <option key={data.id} value={data.category}>
+            {data.category}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
-
 
 export default Dropdown;
