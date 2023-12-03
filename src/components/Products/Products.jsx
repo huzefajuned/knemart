@@ -4,7 +4,6 @@ import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
-import SearchBar from "../SearchBar/SearchBar";
 export const apiBaseURL = "https://dummyjson.com";
 
 
@@ -56,14 +55,13 @@ const Products = ({ cartItems, setCartItems }) => {
               key={product.id}
               className="  m-10 w-72  text-center shadow-lg  flex flex-col justify-between items-center "
             >
-              <img src={images[0]} alt="" className=" h-72 p-2 object-contain"   onClick={() => productView(product.id)} />
+              <img src={images[0]} alt="" className=" h-72 p-2 object-contain" onClick={() => productView(product.id)} />
               <h2 className="text-xl text-black font-bold tracking-widest p-2">
                 {title}
               </h2>
               <h3 className="text-xl">Price:{price}</h3>
               <h3 className="text-xl tracking-wide"> Category:{category}</h3>
               <CustomButton
-                button={"Add To cart"}
                 product={product}
                 cartItems={cartItems}
                 setCartItems={setCartItems}
