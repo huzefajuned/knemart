@@ -12,7 +12,7 @@ const Logo = () => {
       <img
         src={LogoImg}
         alt="logo"
-        className=" w-min md:w-10/12 p-1 bg-contain cursor-pointer"
+        className="w-min md:w-[90%] lg:w-[60%] p-1 bg-contain cursor-pointer"
         onClick={backToHomePage}
       />
     </div>
