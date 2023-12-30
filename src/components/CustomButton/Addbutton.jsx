@@ -12,7 +12,7 @@ const Addbutton = ({ product, setCartItems, button, cartItems }) => {
         setCartItems([...cartItems, product]);
     }
     return (
-        <div className='  md: flex flex-row bg-white mb-20 p-2 m-2 gap-3 z-0  justify-between fixed left-0 right-0 bottom-0  xl:w-96  xl:ml-44 xl:mb-40'>
+        <div className='  md: flex flex-row md:w-96 md:mb-80 bg-white mb-20 p-2 m-2 gap-3 z-0  justify-between fixed left-0 right-0 bottom-0  xl:w-96  xl:ml-44 xl:mb-40'>
             <button className='bg-yellow-500 P-4 w-48 text-md rounded-sm flex flex-row justify-center items-center shadow-md'
                 onClick={addCart}
             >
