@@ -6,6 +6,9 @@ const Home = ({ cartItems, setCartItems }) => {
     <div className="flex flex-col gap-2">
       <Carousal />
       <Products cartItems={cartItems} setCartItems={setCartItems} />
+
+      {/* <ProductView cartItems={cartItems} setCartItems={setCartItems}/> */}
+
     </div>
   );
 };

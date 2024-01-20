@@ -46,44 +46,36 @@ const ProductView = ({ cartItems, setCartItems }) => {
   return (
     <>
       <div>
-        <div className=" flex flex-row  p-10  cursor-pointer h-screen  ">
-          <div className=" flex flex-row ">
-            <div className="flex flex-col w-28 object-contain p-1 m-4 h-96  overflow-scroll no-scrollbar">
+        <div className=" flex flex-col p-5   md:flex md:flex-row xl:flex xl:flex-row   ">
+          <div className=" flex flex-col   md:flex md:flex-col  xl:flex xl:flex-row-reverse ">
+            <div className="  justify-center md:w-96  xl:w-auto xl:m-5  ">
+              <img
+                src={selectedImg || images?.[0]}
+                alt="images"
+                className=" w-5/6 h-80  md:flex flex-row   xl:w-96 xl:h-96  m-4 border-solid border object-cover shadow-md  "
+                x
+              />
+            </div>
+            <div className="   flex flex-row object-contain overflow-scroll m-0 p-0 md:flex md:flex-row md:pl-0  xl:flex xl:flex-col xl:overflow-scroll xl:p-2  xl:h-96 xl:w-44 xl:mt-9 xl:no-scrollbar ">
               {/* Map all iamges....from the images array. */}
               {images?.map((imageUrl, index) => (
                 <img
                   src={imageUrl}
                   onClick={() => selectimage(imageUrl, index)}
-                  className={` h-96 object-contain m-2 cursor-pointer ${CurrentImage === index ? 'border-2 border-blue-500' : 'border-2 border-gray-300'}`} />
+                  className={`flex flex-row  object-contain m-2 cursor-pointer w-24 xl:w-24 xl:h-24 xl:object-cover  ${CurrentImage === index ? 'border-2 border-blue-500' : 'border-2 border-gray-300'}`}
+                />
               ))}
             </div>
-            <div>
-              <div className="m-2 flex flex-col p-3 h-96 ">
-                <img
-                  src={selectedImg || images?.[0]}
-                  alt="images"
-                  className=" h-96  border-solid border-2 border-neutral-950 p-1 object-cover w-96 shadow-md "
-                />
-              </div>
-              <div>
-                <Addbutton
-                  // button={"ADD TO CART"}
-                  product={product}
-                  cartItems={cartItems}
-                  setCartItems={setCartItems} />
 
-              </div>
-            </div>
           </div>
 
-          <div className=" p-20 ">
-            <h2 className="text-4xl tracking-widest pb-5">Brand:{brand}</h2>
-            <h3 className="text-2xl pb-3">Price:{price}</h3>
-            <h2 className="text-2xl pb-3">Rating:{rating}</h2>
-
-            <p className="text-xl">{description}</p>
+          <div className=" mb-36 p-4  xl:pt-9 ">
+            <h2 className="text-xl tracking-widest pb-5 xl:text-4xl  xl:pl-10">Brand:{brand}</h2>
+            <h3 className="text-xl pb-2 xl:text-2xl xl:pl-10">Price:{price}</h3>
+            <h2 className="text-xl pb-2 xl:text-2xl  xl:pl-10">Rating:{rating}</h2>
+            <p className="text-xl pb-2 xl:text-2xl  xl:pl-10">{description}</p>
             <button
-              className="text-2xl pt-6 shadow-sm flex flex-row p-3 justify-center items-center"
+              className="text-xl shadow-sm flex flex-row justify-center items-center  xl:ml-10"
               onClick={backToProduts}
             >
               Back to products
@@ -91,7 +83,14 @@ const ProductView = ({ cartItems, setCartItems }) => {
             </button>
           </div>
         </div>
+        <div>
+          <Addbutton
+            // button={"ADD TO CART"}
+            product={product}
+            cartItems={cartItems}
+            setCartItems={setCartItems} />
 
+        </div>
         {loading && <Loader />}
       </div>
     </>
